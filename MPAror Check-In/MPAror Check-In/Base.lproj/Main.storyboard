@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="gCs-tL-HW8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Check In Controller - Check-In-->
+        <scene sceneID="LxG-BS-kyM">
+            <objects>
+                <viewController id="hke-lX-bdf" customClass="MPA_CheckInController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="biH-SB-zS0"/>
+                        <viewControllerLayoutGuide type="bottom" id="axm-Zv-Aav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H25-NB-RUj">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi Person!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9a-1g-IYU">
+                                <rect key="frame" x="0.0" y="92" width="768" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click submit to check-in for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqp-WA-uJc">
+                                <rect key="frame" x="0.0" y="158" width="768" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Section 1. Monday January 29th" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d4-uF-PAX">
+                                <rect key="frame" x="0.0" y="187" width="768" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVB-3L-6iP">
+                                <rect key="frame" x="345" y="229" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Hours">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qm8-Wl-840" kind="push" id="j0w-Cm-eUe"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvi-z7-pJO">
+                                <rect key="frame" x="8" y="302" width="753" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1720452875" green="0.65754280899999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Check-In" id="WwW-yo-wZK">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="Sba-xo-738">
+                            <connections>
+                                <segue destination="gCs-tL-HW8" kind="modal" id="VfJ-q3-iTR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="formView" destination="hvi-z7-pJO" id="rGw-k5-H1I"/>
+                        <outlet property="name" destination="p9a-1g-IYU" id="2AK-IU-pKC"/>
+                        <outlet property="time" destination="4d4-uF-PAX" id="WVg-xl-ywi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4H-cI-9lp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3867" y="-824"/>
+        </scene>
+        <!--View Controller - MPAror Check-In-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MPA_ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u30-bn-3Rx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ar9-Zn-BqX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-ZO-B0g">
+                                <rect key="frame" x="223" y="702" width="323" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Check In"/>
+                                    <segment title="View Profile"/>
+                                </segments>
+                                <connections>
+                                    <segue destination="SWu-Qc-7nb" kind="push" identifier="toscan" id="Ubu-fb-Jkh"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TeamLogo" translatesAutoresizingMaskIntoConstraints="NO" id="g8K-HY-ada">
+                                <rect key="frame" x="97" y="125" width="575" height="550"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1720452875" green="0.65754280899999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MPAror Check-In" id="GI1-NA-iTd"/>
+                    <connections>
+                        <outlet property="modeToggle" destination="5cr-ZO-B0g" id="19w-TP-c7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="-90"/>
+        </scene>
+        <!--View Hours Controller - View Hours-->
+        <scene sceneID="9t3-sP-8FL">
+            <objects>
+                <viewController id="qm8-Wl-840" customClass="MPA_ViewHoursController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kOf-hV-XtP"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLR-L8-0AQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a70-pC-1EQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-Eg-rav">
+                                <rect key="frame" x="332" y="501" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Hours" id="UIa-1k-ZnH">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="DUl-xM-OLY">
+                            <connections>
+                                <segue destination="gCs-tL-HW8" kind="modal" id="z9a-O3-Xi8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUe-bE-2yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3867" y="644"/>
+        </scene>
+        <!--Scan Controller - Scan Code-->
+        <scene sceneID="XdR-1V-ScK">
+            <objects>
+                <viewController id="SWu-Qc-7nb" customClass="MPA_ScanController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rv0-DC-40F"/>
+                        <viewControllerLayoutGuide type="bottom" id="EEV-2P-TMg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mn8-G2-tml">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CameraView" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-2b-Md2" userLabel="CameraView">
+                                <rect key="frame" x="101" y="144" width="566" height="695"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4083758589" blue="0.35391802220000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1720452875" green="0.65754280899999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan Code" id="96T-8H-deA"/>
+                    <connections>
+                        <outlet property="cameraView" destination="lZa-2b-Md2" id="iEL-7v-DEr"/>
+                        <segue destination="Z9z-ia-L1L" kind="modal" identifier="checkin" modalTransitionStyle="flipHorizontal" id="KDj-CO-jGb"/>
+                        <segue destination="gMx-T3-mCi" kind="modal" identifier="viewhours" modalTransitionStyle="flipHorizontal" id="4ZB-rw-4VX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phq-iB-BNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="-90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mD8-zk-UvC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCs-tL-HW8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Htl-jB-Zrx">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RQo-Lv-uXP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJX-CD-Yhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="-90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sWR-SC-rAb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z9z-ia-L1L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bJb-Ob-IEc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hke-lX-bdf" kind="relationship" relationship="rootViewController" id="5Qn-Zp-dC2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSB-ZI-P0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893" y="-824"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lXG-Ii-Kfa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gMx-T3-mCi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Tq-oq-Cu7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qm8-Wl-840" kind="relationship" relationship="rootViewController" id="Bq6-7M-muA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cF6-yY-fBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893" y="644"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TeamLogo" width="2000" height="2000"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="VfJ-q3-iTR"/>
+        <segue reference="j0w-Cm-eUe"/>
+    </inferredMetricsTieBreakers>
+</document>
